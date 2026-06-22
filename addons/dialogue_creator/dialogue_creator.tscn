@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dbl0o5h5k65nl"]
+
+[ext_resource type="Script" uid="uid://d22gf81yoyym1" path="res://addons/dialogue_creator/temp_button.gd" id="1_5d6qf"]
+
+[node name="DialogueCreator" type="Control" unique_id=1743790296]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="EditorArea" type="GraphEdit" parent="." unique_id=527894752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+type_names = {
+0: "node",
+1: "option"
+}
+
+[node name="Button" type="Button" parent="." unique_id=65743636]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 158.0
+offset_right = 395.0
+offset_bottom = 228.0
+text = "do something"
+script = ExtResource("1_5d6qf")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
